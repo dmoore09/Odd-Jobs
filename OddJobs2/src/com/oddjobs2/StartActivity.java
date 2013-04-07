@@ -1,28 +1,59 @@
 package com.oddjobs2;
 
+import android.widget.EditText;
+
 import sofia.app.Screen;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-
+/**
+ * // -------------------------------------------------------------------------
+/**
+ *  Log in screen for the app
+ *
+ *  @author Daniel
+ *  @version Mar 31, 2013
+ */
 public class StartActivity
     extends Screen
 {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
+    //fields for widgets on the screen
+    private EditText userName;
+    private EditText password;
+
+    //fields to store user name and password
+    private String pass;
+    private String user;
+
+    /**
+     * sign in the user when the sign in button is clicked
+     */
+    public void signInClicked()
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.startactivity);
+        //sign in user
+
+
+        //connect to database
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
+    /**
+     * Retrieve the user name from the userName editText widget
+     */
+    public void userNameEditingDone()
     {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.startactivity, menu);
-        return true;
+        user = userName.getText().toString();
     }
+
+    /**
+     * Retrieve the password from the password editText widget
+     */
+    public void passwordEditingDone()
+    {
+        pass = password.getText().toString();
+    }
+
+
 
 }
