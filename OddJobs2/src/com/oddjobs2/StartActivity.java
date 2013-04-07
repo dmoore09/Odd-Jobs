@@ -32,6 +32,7 @@ public class StartActivity
     public void signInClicked()
     {
         //sign in user
+        presentScreen(MapScreen.class, null);
 
 
         //connect to database
